@@ -5,6 +5,7 @@ file = open('last_words.txt', 'r')
 print(file)
 print()
 
+
 # read individual lines
 line1 = file.readline()
 line2 = file.readline()
@@ -12,10 +13,12 @@ print(line1)
 print(line2)
 print()
 
+
 # read the entire file file
 contents = file.read()
 print(contents)
 print()
+
 
 # close the file
 file.close()
@@ -27,6 +30,7 @@ movies = file2.readlines()
 print(movies)
 print()
 file2.close()
+
 
 # using 'with' automatically closes when finished
 # splitlines() separates on linebreak and removes
@@ -41,17 +45,18 @@ print()
 # write a file
 # try changeing 'w' to 'a' and see what happens
 # (You'll need to run the program more than once)
-file3 = open('new_file.txt', 'w')
-file3.write('This is one line.')
-file3.write('This is another.\n')
-file3.write('This is actually on the next line')
-file3.close()
+with open('movies.txt', 'r') as f:
+    f.write('This is one line.')
+    f.write('This is another.\n')
+    f.write('This is actually on the next line')
+
 
 # read a big file, don't try to print all items!
 with open('scrabble_list.txt', 'r') as f:
     words = f.read().splitlines()
 
 print(words[:10])
+
 
 # select a random element from a list
 print(random.choice(words))

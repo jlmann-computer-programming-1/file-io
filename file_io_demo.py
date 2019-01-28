@@ -57,27 +57,7 @@ print(words[:10])
 print(random.choice(words))
 
 
-# use a for loop to process the list
-''' how many words end with an s? '''
-count = 0
-for w in words:
-    if w[-1] == 's':
-        count += 1
-
-print(count)
-
-
-''' how many words are 2 letters long? '''
-count = 0
-for w in words:
-    if len(w) == 2:
-        count += 1
-
-print(count)
-
-
 ''' make a new file with all words that are 2 letters long ''' 
-
 with open('two_letters.txt', 'w') as f:
     for w in words:
         if len(w) == 2:

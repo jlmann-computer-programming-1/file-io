@@ -5,7 +5,6 @@ file = open('last_words.txt', 'r')
 print(file)
 print()
 
-
 # read individual lines
 line1 = file.readline()
 line2 = file.readline()
@@ -13,12 +12,10 @@ print(line1)
 print(line2)
 print()
 
-
 # read the entire file file
 contents = file.read()
 print(contents)
 print()
-
 
 # close the file
 file.close()
@@ -45,7 +42,7 @@ print()
 # write a file
 # try changeing 'w' to 'a' and see what happens
 # (You'll need to run the program more than once)
-with open('movies.txt', 'r') as f:
+with open('new_file.txt', 'w') as f:
     f.write('This is one line.')
     f.write('This is another.\n')
     f.write('This is actually on the next line')
